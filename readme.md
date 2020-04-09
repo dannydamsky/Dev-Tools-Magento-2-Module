@@ -26,6 +26,23 @@ Compatibility
 -------------
 - Magento >= 2.3.3
 
+How To Install
+-------------
+The recommended way to install this module
+is with composer.
+
+Make sure you have this data in your composer.json file.
+
+        "repositories": [
+                {
+                    "type": "vcs",
+                    "url": "https://github.com/dannydamsky/Dev-Tools-Magento-2-Module"
+                }
+        ],
+        "require": {
+                "dannydamsky/module-devtools": "1.0.0"
+        }
+
 Features
 -----------------
 
