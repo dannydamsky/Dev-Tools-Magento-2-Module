@@ -411,6 +411,11 @@ The configurations in this route that belong to this module include:
 9. <b>Log Rotation Settings</b> - Compress (Depends on log rotations being enabled)
 10. <b>Log Rotation Settings</b> - Days (Depends on log rotations being enabled)
 
+Sample Module
+-------------
+
+[Click Here To Download](https://github.com/dannydamsky/Dev-Tools-Magento-2-Module/releases/download/1.0.0/DannyDamsky_PlayGround.tar.gz)
+
 Developer
 ---------
 Danny Damsky <dannydamsky99@gmail.com>
