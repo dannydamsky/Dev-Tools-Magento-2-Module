@@ -1,0 +1,33 @@
+{
+    "name": "dannydamsky/module-devtools",
+    "description": "A collection of utilities meant to improve the experience of developing modules for Magento.",
+    "type": "magento2-module",
+    "version": "1.0.0",
+    "license": [
+        "BSD"
+    ],
+    "authors": [
+        {
+            "name": "Danny Damsky",
+            "email": "dannydamsky99@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.3",
+        "ext-json": "*",
+        "ext-imagick": "*",
+        "ext-simplexml": "*",
+        "ext-zlib": "*"
+    },
+    "suggest": {
+        "twig/twig": "Enables the use of twig templates in Magento, please use version 2.0 and above. (Recommended: ~3.0)"
+    },
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "DannyDamsky\\DevTools\\": ""
+        }
+    }
+}

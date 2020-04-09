@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<!--
+/*
+ * Copyright (c) 2020 Danny Damsky
+ *
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions
+ * are met:
+ * 1. Redistributions of source code must retain the above copyright
+ *    notice, this list of conditions and the following disclaimer.
+ * 2. Redistributions in binary form must reproduce the above copyright
+ *    notice, this list of conditions and the following disclaimer in the
+ *    documentation and/or other materials provided with the distribution.
+ * 3. Neither the name of the author nor the names of its contributors may
+ *    be used to endorse or promote products derived from this software
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE AUTHOR AND CONTRIBUTORS ``AS IS'' AND
+ * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ * ARE DISCLAIMED.  IN NO EVENT SHALL THE AUTHOR OR CONTRIBUTORS BE LIABLE
+ * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
+ * OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+ * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+ * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
+ * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
+ * SUCH DAMAGE.
+ */
+-->
+<!--
+/**
+ * di.xml
+ *
+ * A collection of utilities meant to improve the experience of developing modules for Magento.
+ *
+ * @since 2020-03-24
+ * @author Danny Damsky <dannydamsky99@gmail.com>
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+
+    <preference for="DannyDamsky\DevTools\Helper\Config"
+                type="DannyDamsky\DevTools\Helper\LazyConfig"/>
+
+    <preference for="Magento\Framework\Serialize\Serializer\Json"
+                type="DannyDamsky\DevTools\Serialize\Serializer\Json"/>
+
+    <preference for="DannyDamsky\DevTools\Api\ClassVersionMethodInterface"
+                type="DannyDamsky\DevTools\Model\Version\ClassVersionMethod"/>
+
+    <preference for="DannyDamsky\DevTools\Api\ClassVersionMethodFactoryInterface"
+                type="DannyDamsky\DevTools\Model\Version\ClassVersionMethodFactory"/>
+
+    <preference for="DannyDamsky\DevTools\Api\ClassVersionMethodsInterface"
+                type="DannyDamsky\DevTools\Model\Version\ClassVersionMethods"/>
+
+    <preference for="DannyDamsky\DevTools\Api\ClassVersionMethodsFactoryInterface"
+                type="DannyDamsky\DevTools\Model\Version\ClassVersionMethodsFactory"/>
+
+    <preference for="DannyDamsky\DevTools\Api\ColumnDefinitionInterface"
+                type="DannyDamsky\DevTools\Model\Setup\Migration\ColumnDefinition"/>
+
+    <preference for="DannyDamsky\DevTools\Api\ColumnDefinitionFactoryInterface"
+                type="DannyDamsky\DevTools\Model\Setup\Migration\ColumnDefinitionFactory"/>
+
+    <preference for="DannyDamsky\DevTools\Api\BlueprintInterface"
+                type="DannyDamsky\DevTools\Model\Setup\Migration\Blueprint"/>
+
+    <preference for="DannyDamsky\DevTools\Api\BlueprintFactoryInterface"
+                type="DannyDamsky\DevTools\Model\Setup\Migration\BlueprintFactory"/>
+
+    <preference for="DannyDamsky\DevTools\Api\SchemaInterface"
+                type="DannyDamsky\DevTools\Model\Setup\Migration\Schema"/>
+
+    <preference for="DannyDamsky\DevTools\Api\SchemaFactoryInterface"
+                type="DannyDamsky\DevTools\Model\Setup\Migration\SchemaFactory"/>
+
+    <type name="Magento\Framework\View\TemplateEngineFactory">
+        <arguments>
+            <argument name="engines" xsi:type="array">
+                <item name="twig" xsi:type="string">DannyDamsky\DevTools\View\TemplateEngine\Twig</item>
+            </argument>
+        </arguments>
+    </type>
+</config>

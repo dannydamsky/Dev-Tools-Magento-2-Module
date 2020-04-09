@@ -1,0 +1,156 @@
+/*
+ * Copyright (c) 2020 Danny Damsky
+ *
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions
+ * are met:
+ * 1. Redistributions of source code must retain the above copyright
+ *    notice, this list of conditions and the following disclaimer.
+ * 2. Redistributions in binary form must reproduce the above copyright
+ *    notice, this list of conditions and the following disclaimer in the
+ *    documentation and/or other materials provided with the distribution.
+ * 3. Neither the name of the author nor the names of its contributors may
+ *    be used to endorse or promote products derived from this software
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE AUTHOR AND CONTRIBUTORS ``AS IS'' AND
+ * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ * ARE DISCLAIMED.  IN NO EVENT SHALL THE AUTHOR OR CONTRIBUTORS BE LIABLE
+ * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
+ * OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+ * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+ * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
+ * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
+ * SUCH DAMAGE.
+ */
+
+/**
+ * _module.less
+ * @since 2020-03-26
+ * @author Danny Damsky <dannydamsky99@gmail.com>
+ */
+
+.lib-dannydamsky-devtools-prefix-user-select(@value: none) {
+    -webkit-touch-callout: @value; /* iOS Safari */
+    -webkit-user-select: @value; /* Safari */
+    -khtml-user-select: @value; /* Konqueror HTML */
+    -moz-user-select: @value; /* Old versions of Firefox */
+    -ms-user-select: @value; /* Internet Explorer/Edge */
+    user-select: @value;
+}
+
+.lib-dannydamsky-devtools-prefix-align-items(@value: center) {
+    -webkit-box-align: @value;
+    -webkit-align-items: @value;
+    -moz-box-align: @value;
+    -ms-flex-align: @value;
+    align-items: @value;
+}
+
+.lib-dannydamsky-devtools-prefix-align-items(@value) when (@value = "flex-start") {
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+    -moz-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+}
+
+.lib-dannydamsky-devtools-prefix-align-items(@value) when (@value = "flex-end") {
+    -webkit-box-align: end;
+    -webkit-align-items: flex-end;
+    -moz-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+}
+
+.lib-dannydamsky-devtools-prefix-align-content(@value: center) {
+    -webkit-align-content: @value;
+    -ms-flex-line-pack: @value;
+    align-content: @value;
+}
+
+.lib-dannydamsky-devtools-prefix-align-content(@value) when (@value = "flex-start") {
+    -webkit-align-content: flex-start;
+    -ms-flex-line-pack: start;
+    align-content: flex-start;
+}
+
+.lib-dannydamsky-devtools-prefix-align-content(@value) when (@value = "flex-end") {
+    -webkit-align-content: flex-end;
+    -ms-flex-line-pack: end;
+    align-content: flex-end;
+}
+
+.lib-dannydamsky-devtools-prefix-align-self(@value: center) {
+    -webkit-align-self: @value;
+    -ms-flex-item-align: @value;
+    -ms-grid-row-align: @value;
+    align-self: @value;
+}
+
+.lib-dannydamsky-devtools-prefix-align-self(@value) when (@value = "flex-start") {
+    -webkit-align-self: flex-start;
+    -ms-flex-item-align: start;
+    align-self: flex-start;
+}
+
+.lib-dannydamsky-devtools-prefix-align-self(@value) when (@value = "flex-end") {
+    -webkit-align-self: flex-end;
+    -ms-flex-item-align: end;
+    align-self: flex-end;
+}
+
+.lib-dannydamsky-devtools-prefix-justify-content(@value: center) {
+    -webkit-box-pack: @value;
+    -webkit-justify-content: @value;
+    -moz-box-pack: @value;
+    -ms-flex-pack: @value;
+    justify-content: @value
+}
+
+.lib-dannydamsky-devtools-prefix-justify-content(@value) when (@value = "flex-start") {
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -moz-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+}
+
+.lib-dannydamsky-devtools-prefix-justify-content(@value) when (@value = "flex-end") {
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+    -moz-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+}
+
+.lib-dannydamsky-devtools-prefix-justify-content(@value) when (@value = "space-between") {
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -moz-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.lib-dannydamsky-devtools-prefix-justify-content(@value) when (@value = "space-around") {
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+}
+
+
+.lib-dannydamsky-devtools-prefix-justify-self(@value: center) {
+    -ms-grid-column-align: @value;
+    justify-self: @value;
+}
+
+.lib-dannydamsky-devtools-prefix-justify-self(@value) when (@value = "flex-start") {
+    -ms-grid-column-align: start;
+    justify-self: flex-start;
+}
+
+.lib-dannydamsky-devtools-prefix-justify-self(@value) when (@value = "flex-end") {
+    -ms-grid-column-align: end;
+    justify-self: flex-end;
+}

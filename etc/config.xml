@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<!--
+/*
+ * Copyright (c) 2020 Danny Damsky
+ *
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions
+ * are met:
+ * 1. Redistributions of source code must retain the above copyright
+ *    notice, this list of conditions and the following disclaimer.
+ * 2. Redistributions in binary form must reproduce the above copyright
+ *    notice, this list of conditions and the following disclaimer in the
+ *    documentation and/or other materials provided with the distribution.
+ * 3. Neither the name of the author nor the names of its contributors may
+ *    be used to endorse or promote products derived from this software
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE AUTHOR AND CONTRIBUTORS ``AS IS'' AND
+ * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ * ARE DISCLAIMED.  IN NO EVENT SHALL THE AUTHOR OR CONTRIBUTORS BE LIABLE
+ * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
+ * OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+ * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+ * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
+ * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
+ * SUCH DAMAGE.
+ */
+-->
+<!--
+/**
+ * config.xml
+ *
+ * A collection of utilities meant to improve the experience of developing modules for Magento.
+ *
+ * @since 2020-03-24
+ * @author Danny Damsky <dannydamsky99@gmail.com>
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <dev>
+            <image>
+                <adapters>
+                    <IMAGEMAGICK>
+                        <class>DannyDamsky\DevTools\Image\Adapter\ImageMagick</class>
+                    </IMAGEMAGICK>
+                </adapters>
+            </image>
+            <debug>
+                <dannydamsky_devtools_twig_to_string>0</dannydamsky_devtools_twig_to_string>
+            </debug>
+            <template>
+                <dannydamsky_devtools_twig_recompile>1</dannydamsky_devtools_twig_recompile>
+                <dannydamsky_devtools_twig_strict_variables>1</dannydamsky_devtools_twig_strict_variables>
+                <dannydamsky_devtools_twig_charset>UTF-8</dannydamsky_devtools_twig_charset>
+            </template>
+            <js>
+                <dannydamsky_devtools_polyfill_enable>0</dannydamsky_devtools_polyfill_enable>
+                <dannydamsky_devtools_polyfill_url>https://polyfill.io/v3/polyfill.min.js?features=default%2Ces5%2Ces6%2Ces7%2CNodeList.prototype.forEach</dannydamsky_devtools_polyfill_url>
+            </js>
+            <caching>
+                <dannydamsky_devtools_twig_cache>1</dannydamsky_devtools_twig_cache>
+            </caching>
+            <dannydamsky_devtools_log_rotation>
+                <enabled>0</enabled>
+                <compress>1</compress>
+                <days>14</days>
+            </dannydamsky_devtools_log_rotation>
+        </dev>
+    </default>
+</config>
